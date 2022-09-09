@@ -1,0 +1,15 @@
+buddies = {}
+buddySwitch = False
+while True:
+    username = input("What is your username?\n")
+    password = input("What is your password?\n")
+    for i in buddies:
+        if buddies[i] == password:
+            print("Password Buddy: " + i)
+            buddySwitch = True
+    if buddySwitch == True:
+        print("Congratulations! It's always great to have a password buddy! You should get in touch, that's what the usernames are for!")
+    else:
+        print("Darn, no password buddies this time! Don't worry though, if any come up we'll be sure to give them your username")
+    buddies[username] = password
+    buddySwitch = False
